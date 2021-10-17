@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val amount = binding.amount.text.toString()
         val result = amount.toDoubleOrNull()
         val selectedButton = binding.radioGroup.checkedRadioButtonId
+
         if (amount.isEmpty()) {
             Toast.makeText(this, "Tutar Boş Bırakılamaz!", Toast.LENGTH_SHORT).show()
             return
@@ -32,11 +33,15 @@ class MainActivity : AppCompatActivity() {
             R.id.eight_percent_radio_button -> 0.08
             else -> 0.18
         }
-        val result2 = kdvPercentage * result!!
-        if(binding.button.isClickable){
+        val KDVresult = kdvPercentage * result!!
+        if (binding.button.isClickable) {
             binding.textView6.text = ""
         }
-        binding.textView6.text = "${binding.textView6.text}" + " $result2"
+
+        binding.textView6.text =
+            "${binding.textView6.text}: " + " ${amount.toInt() - KDVresult.toInt()}"
+        binding.textView5.text = "${binding.textView5.text}: " + " ${KDVresult.toInt()}"
+        binding.textView4.text = "${binding.textView3.text}: " + "${amount.toInt()}"
 
 
     }

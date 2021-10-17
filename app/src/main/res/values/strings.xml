@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">KDVCalculate</string>
+    <string name="vergi_tutar">Vergi Tutarı</string>
+    <string name="genel_toplam">Genel Toplam</string>
+    <string name="hesapla">Hesapla</string>
+    <string name="_18">%18</string>
+    <string name="_8">%8</string>
+    <string name="_1">%1</string>
+    <string name="tutar_turu">Tutar Türü</string>
+    <string name="sonuc_tutar">Tutar</string>
+    <string name="sonuc_text">Sonuç</string>
 </resources>
