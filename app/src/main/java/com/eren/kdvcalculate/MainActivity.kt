@@ -38,10 +38,9 @@ class MainActivity : AppCompatActivity() {
             binding.textView6.text = ""
         }
 
-        binding.textView6.text =
-            "${binding.textView6.text}: " + " ${amount.toInt() - KDVresult.toInt()}"
-        binding.textView5.text = "${binding.textView5.text}: " + " ${KDVresult.toInt()}"
-        binding.textView4.text = "${binding.textView3.text}: " + "${amount.toInt()}"
+        binding.textView4.text = "Genel Toplam: ${amount.toInt()}"
+        binding.textView5.text = "Vergi Tutarı: ${KDVresult}"
+        binding.textView6.text = "Tutar: ${amount.toInt() - KDVresult.toInt()}"
 
 
     }
